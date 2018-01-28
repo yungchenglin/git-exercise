@@ -3,10 +3,12 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Role</th>
   </tr>
   <% @users.each do |user| %>
     <tr>
       <td><%= user.name %></td>
+      <td><%= "Admin" if user.is_admin? %></td>
     </tr>
   <% end %>
 </table>
