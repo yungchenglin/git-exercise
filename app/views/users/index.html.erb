@@ -3,10 +3,16 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>Role</th>
   </tr>
   <% @users.each do |user| %>
     <tr>
+<<<<<<< HEAD
       <td><%= link_to user.name,user_path(user) %></td>
+=======
+      <td><%= user.name %></td>
+      <td><%= "Admin" if user.is_admin? %></td>
+>>>>>>> 10c25968a50e9322c8639690f4fda6988f56f82a
     </tr>
   <% end %>
 </table>
